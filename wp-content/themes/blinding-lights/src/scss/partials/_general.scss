@@ -1,0 +1,155 @@
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $dark;
+  font-family: $font-primary;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $grey;
+  line-height: 1.5;
+  @include custom-scrollbar;
+
+  .page-container {
+    background-color: $black;
+    position: relative;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  @include media-breakpoint-down(md) {
+    .page-container {
+      transition: transform 1s, filter .5s, opacity .5s;
+    }
+
+    &.mobile-menu-opened {
+      overflow: hidden;
+
+      .page-container {
+        transform: translateX(-300px);
+        opacity: .5;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.bg_blue {
+  background-color: $blue;
+}
+
+.bg_dark {
+  background-color: $dark;
+}
+
+.bg_dark-alt {
+  background-color: $dark-alt;
+}
+
+.color_white {
+  color: $white;
+}
+
+.color_blue {
+  color: $blue;
+}
+
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
+  margin: 0 0 .3em;
+}
+
+h1, .h1 {
+  font-size: 3.333rem;
+}
+
+h2, .h2 {
+  font-size: 2.444rem;
+}
+
+h3, .h3 {
+  font-size: 1.333rem;
+}
+
+h4, .h4 {
+  font-size: 1.25rem;
+}
+
+h5, .h5 {
+  font-size: 1.125rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 .8em;
+}
+
+small {
+  font-size: .888rem;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+.responsive-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 43px;
+  line-height: 2em;
+  font-size: 1.333rem;
+  color: $dark;
+  background-color: $white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow .3s, background-color .3s;
+
+  [class*="icon-"] {
+    margin-left: 0.3em;
+    font-size: 1.2em;
+  }
+
+  &:hover, &:active {
+    box-shadow: 0 0 0 5px rgba($white, .4);
+  }
+
+  &:active {
+    background-color: $white-alt;
+  }
+}
+
+#breadcrumbs {
+  font-size: .888rem;
+  color: $white;
+  line-height: 2;
+  display: block;
+  margin-bottom: 2.3rem;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .breadcrumb_last {
+    color: $blue;
+  }
+}

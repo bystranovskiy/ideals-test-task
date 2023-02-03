@@ -1,0 +1,79 @@
+@import "../partials/variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+.section-intro {
+  padding: 224px 0 150px 0;
+  position: relative;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(xl) {
+    min-height: 957px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../src/img/vector.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    opacity: .05;
+  }
+
+  .intro-title {
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: .5em;
+    @include media-breakpoint-up(xl) {
+      font-size: 5.333rem;
+    }
+  }
+
+  p {
+    @include media-breakpoint-up(md) {
+      font-size: 1.333rem;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 1.777rem;
+    }
+  }
+
+  small {
+    color: $white-sec;
+  }
+
+  .icon-down-open {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.333rem;
+    transition: -webkit-text-stroke-color .3s, transform .3s, color .3s;
+    -webkit-text-fill-color: $white;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: 7px;
+
+    &:hover {
+      -webkit-text-stroke-color: rgba($white, .4);
+      transform: translate(-50%, 2px);
+    }
+
+    &:active {
+      transform: translate(-50%, 4px);
+      color: $white-alt;
+    }
+
+    @include media-breakpoint-up(xl) {
+      bottom: 100px;
+    }
+  }
+}

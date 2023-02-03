@@ -1,0 +1,118 @@
+@import "../partials/variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+.section-merch {
+  position: relative;
+  background-color: $black;
+  background-image: url("../../../src/img/buy-now.svg");
+  background-repeat: repeat-x;
+  animation: animatedBackground 60s linear infinite;
+  background-position: 0 45%;
+
+  .merch-slider {
+    max-width: 930px;
+  }
+
+  .merch-item {
+    background-color: $dark;
+  }
+
+  .merch-item-info {
+    padding: 50px 15px 30px;
+    @include media-breakpoint-up(md) {
+      padding: 72px 0 30px 30px;
+    }
+  }
+
+  .merch-item-desc {
+    p {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+    margin: 50px 0 0;
+
+    li {
+      padding: 0;
+
+      button {
+        width: 18px;
+        height: 18px;
+        border: 1px solid $white;
+        transition: background-color .3s, border-color .3s;
+        padding: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 0;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $white;
+        }
+      }
+
+      &.slick-active {
+        button {
+          border-color: $blue;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    bottom: -30px;
+    background-color: transparent;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+    font-family: 'ideals';
+    color: $blue;
+    transition: color .3s;
+
+    &.slick-disabled {
+      cursor: auto;
+      color: $beetroot;
+    }
+
+    &:not(.slick-disabled):hover {
+      color: $white;
+    }
+
+    &:before {
+      font-size: 4rem;
+    }
+
+    &.slick-next {
+      right: 0;
+
+      &:before {
+        content: '\e801';
+      }
+    }
+
+    &.slick-prev {
+      right: 70px;
+
+      &:before {
+        content: '\e800';
+      }
+    }
+  }
+}
+
+@keyframes animatedBackground {
+  50% {
+    background-position: -100vw 45%;
+  }
+}

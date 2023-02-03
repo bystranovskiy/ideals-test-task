@@ -1,0 +1,16 @@
+@import "../partials/variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+.section-about-us {
+  font-weight: 500;
+  line-height: 1.56;
+  @include media-breakpoint-up(md) {
+    font-size: 1.333rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.777rem;
+  }
+
+}

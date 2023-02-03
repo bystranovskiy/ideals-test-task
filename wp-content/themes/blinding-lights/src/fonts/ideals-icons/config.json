@@ -1,0 +1,54 @@
+{
+  "name": "ideals",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "4099155c2b9d3cfc8571839b7b56b33e",
+      "css": "apple",
+      "code": 59394,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M702.4 528.5C701.9 446.5 739 384.7 814 339.2 772.1 279.1 708.6 246 625 239.7 545.8 233.4 459.1 285.8 427.4 285.8 393.9 285.8 317.2 241.8 256.8 241.8 132.3 243.7 0 341.1 0 539.2 0 597.7 10.7 658.1 32.1 720.4 60.7 802.4 163.8 1003.2 271.4 1000 327.6 998.6 367.4 960.1 440.6 960.1 511.6 960.1 548.4 1000 611.2 1000 719.7 998.4 813 815.8 840.1 733.6 694.6 665 702.4 532.7 702.4 528.5ZM576.1 161.9C637 89.5 631.5 23.7 629.7 0 575.8 3.1 513.6 36.7 478.1 77.9 439 122.1 416.1 176.8 421 238.5 479.2 242.9 532.3 213 576.1 161.9Z",
+        "width": 867
+      },
+      "search": [
+        "apple"
+      ]
+    },
+    {
+      "uid": "9dc654095085167524602c9acc0c5570",
+      "css": "left-dir",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fb1c799ffe5bf8fb7f8bcb647c8fe9e6",
+      "css": "right-dir",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "2d6150442079cbda7df64522dc24f482",
+      "css": "down-dir",
+      "code": 59395,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "80cd1022bd9ea151d554bec1fa05f2de",
+      "css": "up-dir",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "down-open",
+      "code": 59397,
+      "src": "fontawesome"
+    }
+  ]
+}

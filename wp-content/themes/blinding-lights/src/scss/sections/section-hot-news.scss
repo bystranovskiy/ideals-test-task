@@ -1,0 +1,68 @@
+@import "../partials/variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+.section-hot-news {
+
+  .posts-list {
+    @include media-breakpoint-up(xxl) {
+      margin-left: -2.6rem;
+      margin-right: -2.6rem;
+    }
+  }
+
+  .post-item {
+    max-width: 366px;
+    margin-inline: auto;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 100%;
+      margin-inline: unset;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding-left: 2.6rem;
+      padding-right: 2.6rem;
+    }
+  }
+
+  .post-image {
+    background-color: $dark-sec;
+    padding: 14px;
+    display: block;
+    transition: opacity .5s;
+
+    &:hover {
+      opacity: .5;
+    }
+
+  }
+
+  .post-title {
+    position: relative;
+    line-height: 1.8;
+
+    &:before {
+      content: "";
+      background-color: $blue;
+      height: 21px;
+      left: 43px;
+      right: 0;
+      top: 50%;
+      position: absolute;
+      transition: left .3s;
+    }
+
+    &:hover {
+      &:before {
+        left: 90px;
+      }
+    }
+
+    a {
+      display: block;
+      position: relative;
+    }
+  }
+}

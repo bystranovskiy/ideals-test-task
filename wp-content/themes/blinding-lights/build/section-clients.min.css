@@ -1,0 +1,2 @@
+@media (max-width: 719.98px){.section-clients .client-item{text-align:center}}@media (min-width: 720px) and (max-width: 979.98px){.section-clients .client-item:nth-child(even){text-align:right}}@media (min-width: 980px){.section-clients .client-item:nth-child(3n+2){text-align:center}.section-clients .client-item:nth-child(3n+3){text-align:right}}.section-clients .client-img{display:inline-block;max-width:210px;height:auto;aspect-ratio:2/1;object-fit:contain}
+

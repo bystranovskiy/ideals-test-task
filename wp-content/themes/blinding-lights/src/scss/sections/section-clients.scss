@@ -1,0 +1,37 @@
+@import "../partials/variables";
+@import "../bootstrap/functions";
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+
+.section-clients {
+
+  .client-item {
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+
+    @include media-breakpoint-only(md) {
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:nth-child(3n+2) {
+        text-align: center;
+      }
+      &:nth-child(3n+3) {
+        text-align: right;
+      }
+    }
+  }
+
+  .client-img {
+    display: inline-block;
+    max-width: 210px;
+    height: auto;
+    aspect-ratio: 2/1;
+    object-fit: contain;
+  }
+}
