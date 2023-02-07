@@ -68,9 +68,17 @@ header {
         position: relative;
 
         &:after {
-          font-family: 'ideals';
-          content: '\e803';
-          margin-left: 1.2em;
+          margin-left: 1em;
+          margin-bottom: .3em;
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 7px 7px 0 8px;
+          border-color: $white transparent transparent transparent;
+          display: inline-block;
+          vertical-align: middle;
+          transition: transform .3s;
         }
       }
 
@@ -89,7 +97,7 @@ header {
           font-weight: normal;
           text-align: left;
           transition: color .3s, background-color .3s;
-          border-color: $white;
+          border-color: $dark;
           border-top: 0;
 
           &:hover {
@@ -100,6 +108,12 @@ header {
       }
 
       &:hover {
+        > a {
+          &:after {
+            transform: scaleY(-1);
+          }
+        }
+
         .sub-menu {
           transition: opacity .3s, visibility 0s 0s;
           opacity: 1;
@@ -188,7 +202,7 @@ header {
   height: 4px;
   position: relative;
   background-color: $white;
-  transition: background-color .3s;
+  transition: background-color .3s .3s;
 
   &:before, &:after {
     content: "";
@@ -244,6 +258,7 @@ body {
   &.mobile-menu-opened {
     .mobile-toggle {
       background-color: transparent;
+      transition: background-color .3s;
 
       &:before {
         top: 0;
@@ -272,4 +287,98 @@ body {
   }
 }
 
+@include media-breakpoint-up(lg) {
+  header {
+    &:not(.sticky) {
 
+      .search-form {
+        .search-toggle {
+          svg {
+            path {
+              transition: stroke .3s .6s;
+            }
+          }
+
+          &:hover {
+            svg {
+              path {
+                stroke: $dark;
+              }
+            }
+          }
+        }
+
+        .search-field_fade-in {
+          color: $white;
+          background-color: $dark;
+        }
+
+        .search-field_fade-in {
+          &:hover, &:focus, &:active {
+            + .search-toggle {
+              svg {
+                path {
+                  stroke: $dark;
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .search-toggle {
+            svg {
+              path {
+                stroke: $dark;
+                transition: stroke .3s;
+              }
+            }
+          }
+        }
+      }
+
+      .menu {
+        li {
+          a {
+            &:hover {
+              color: $dark;
+              border-color: $dark;
+            }
+          }
+
+          &.menu-item-has-children {
+            > a {
+              &:after {
+                transition: border-color .3s;
+              }
+            }
+
+            .sub-menu {
+              a {
+                border-color: $dark;
+                background-color: $dark;
+                color: $white;
+
+                &:hover {
+                  color: $dark;
+                  background-color: $white;
+                }
+              }
+            }
+
+            &:hover {
+              > a {
+                color: $dark;
+                border-color: $dark;
+
+                &:after {
+                  border-color: $dark transparent transparent transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,12 +4,15 @@
 @import "../bootstrap/mixins";
 
 .section-intro {
-  padding: 224px 0 150px 0;
+  padding: 120px 0 60px 0;
   position: relative;
   text-align: center;
+  min-height: 100vh;
 
   @include media-breakpoint-up(lg) {
+    padding: 224px 0 150px 0;
     text-align: left;
+    min-height: unset;
   }
 
   @include media-breakpoint-up(xl) {
@@ -53,7 +56,7 @@
 
   .icon-down-open {
     position: absolute;
-    bottom: 50px;
+    bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.333rem;
@@ -70,6 +73,10 @@
     &:active {
       transform: translate(-50%, 4px);
       color: $white-alt;
+    }
+
+    @include media-breakpoint-up(lg) {
+      bottom: 50px;
     }
 
     @include media-breakpoint-up(xl) {
